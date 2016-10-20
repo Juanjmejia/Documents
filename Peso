@@ -1,0 +1,103 @@
+<html>
+  <head>
+    <title>Peso en otros planetas</title>
+      <style type="text/css">
+      body {
+        background-color: black;
+        color: white;
+        font-size: 60px;
+      }
+      </style>
+  </head>
+  <body>
+    <h1>Tu peso en otros planetas</h1>
+    <p> Disenado por Juan Jose Mejia </p>
+  <script type="text/javascript">
+    var usuario = prompt("Cual es tu peso?");
+    var planet = prompt("En que Planeta deseas saber tu peso... 0: Sol, 1: Mercurio, 2: Venus, 3: Luna, 4: Marte, 5: Ceres, 6: Jupiter, 7: Saturno, 8: Urano, 9: Neptuno, 10: Pluton, 11: Sedna");
+
+    //alert(usuario);
+    //alert(planeta);
+    var gravedad_sol = 274;
+    var gravedad_mercurio = 3.7;
+    var gravedad_venus = 8.87;
+    var gravedad_tierra = 9.8;
+    var gravedad_luna = 1.6;
+    var gravedad_marte = 3.7;
+    var gravedad_ceres = 0.27;
+    var gravedad_jupiter = 22.9;
+    var gravedad_saturno = 10.44;
+    var gravedad_urano = 8.69;
+    var gravedad_neptuno = 11.15;
+    var gravedad_pluton = 0.62;
+    var gravedad_sedna = 0.27;
+
+    if (planet == 0) {
+    var peso_et = (usuario * gravedad_sol) / gravedad_tierra;
+    var nombrep = "Sol";
+    }
+
+    else if (planet == 1) {
+    var peso_et = (usuario * gravedad_mercurio) / gravedad_tierra;
+    var nombrep = "Mercurio";
+    }
+
+    else if (planet == 2) {
+    var peso_et = (usuario * gravedad_venus) / gravedad_tierra;
+    var nombrep = "Venus";
+    }
+
+    else if (planet == 3) {
+      var peso_et = (usuario * gravedad_luna) / gravedad_tierra;
+      var nombrep = "Luna";
+    }
+
+    else if (planet == 4) {
+    var peso_et = (usuario * gravedad_marte) / gravedad_tierra;
+    var nombrep = "Marte";
+    }
+
+    else if (planet == 5) {
+    var peso_et = (usuario * gravedad_ceres) / gravedad_tierra;
+    var nombrep = "Ceres";
+    }
+
+    else if (planet == 6) {
+    var peso_et = (usuario * gravedad_jupiter) / gravedad_tierra;
+    var nombrep = "Jupiter";
+    }
+
+    else if (planet == 7) {
+    var peso_et = (usuario * gravedad_saturno) / gravedad_tierra;
+    var nombrep = "Saturno";
+    }
+
+    else if (planet == 8) {
+    var peso_et = (usuario * gravedad_urano) / gravedad_tierra;
+    var nombrep = "Urano";
+    }
+
+    else if (planet == 9) {
+    var peso_et = (usuario * gravedad_neptuno) / gravedad_tierra;
+    var nombrep = "Neptuno";
+    }
+
+    else if (planet == 10) {
+    var peso_et = (usuario * gravedad_pluton) / gravedad_tierra;
+    var nombrep = "Pluton";
+    }
+
+    else if (planet == 11) {
+    var peso_et = (usuario * gravedad_sedna) / gravedad_tierra;
+    var nombrep = "Sedna";
+    }
+
+    peso_et = parseInt(peso_et)
+
+    //alert(peso_et)
+
+    document.write("Tu peso en <strong>" + nombrep + "</strong> es igual a" + peso_et +  "kg")
+
+   </script>
+  </body>
+</html>
