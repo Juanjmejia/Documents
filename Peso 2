@@ -1,0 +1,179 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Peso en otros planetas</title>
+      <style type="text/css">
+      body {background-color: #843104;}
+      h1 {color: #F7D358; font-size: 300%;}
+      p {color: #FFFFFF; font-size: 125%;}
+      #caja1{
+        position: absolute;
+        left: 30%;
+        top: 3%;
+        background-color: #000000;
+        padding: 20px;
+        border-color: #510B21;
+        border-style: solid;
+        border-width: thick;
+      }
+      </style>
+      <script type="text/javascript">
+        var nom = prompt ("CUAL ES TU NOMBRE?");
+        //var usuario = prompt("Cual es tu peso?");
+        //var planet = prompt("En que Planeta deseas saber tu peso... 0: Sol, 1: Mercurio, 2: Venus, 3: Luna, 4: Marte, 5: Ceres, 6: Jupiter, 7: Saturno, 8: Urano, 9: Neptuno, 10: Pluton, 11: Sedna");
+
+        function calculo() {
+        //alert("");
+        usuario = document.getElementById("peso").value;
+        //alert(usuario);
+        if (document.getElementById("El Sol").checked == true) {
+          planeta = 0;
+        }
+        //alert(usuario);
+        if (document.getElementById("Mercurio").checked == true) {
+          planeta = 1;
+        }
+        //alert(usuario);
+        if (document.getElementById("Venus").checked == true) {
+          planeta = 2;
+        }
+        //alert(usuario);
+        if (document.getElementById("La Luna").checked == true) {
+          planeta = 3;
+        }
+        if (document.getElementById("Marte").checked == true) {
+          planeta = 4;
+        }
+        if (document.getElementById("Ceres").checked == true) {
+          planeta = 5;
+        }
+        if (document.getElementById("Jupiter").checked == true) {
+          planeta = 6;
+        }
+        if (document.getElementById("Saturno").checked == true) {
+          planeta = 7;
+        }
+        if (document.getElementById("Urano").checked == true) {
+          planeta = 8;
+        }
+        if (document.getElementById("Neptuno").checked == true) {
+          planeta = 9;
+        }
+        if (document.getElementById("Pluton").checked == true) {
+          planeta = 10;
+        }
+        if (document.getElementById("Sedna").checked == true) {
+          planeta = 11;
+        }
+        //alert(usuario);
+        //alert(planeta);
+
+        var gravedad_sol = 274;
+        var gravedad_mercurio = 3.7;
+        var gravedad_venus = 8.87;
+        var gravedad_tierra = 9.8;
+        var gravedad_luna = 1.6;
+        var gravedad_marte = 3.7;
+        var gravedad_ceres = 0.27;
+        var gravedad_jupiter = 22.9;
+        var gravedad_saturno = 10.44;
+        var gravedad_urano = 8.69;
+        var gravedad_neptuno = 11.15;
+        var gravedad_pluton = 0.62;
+        var gravedad_sedna = 0.27;
+
+        if (planeta == 0) {
+        var peso_et = (usuario * gravedad_sol) / gravedad_tierra;
+        var nombrep = "El Sol";
+        }
+
+        else if (planeta == 1) {
+        var peso_et = (usuario * gravedad_mercurio) / gravedad_tierra;
+        var nombrep = "Mercurio";
+        }
+
+        else if (planeta == 2) {
+        var peso_et = (usuario * gravedad_venus) / gravedad_tierra;
+        var nombrep = "Venus";
+        }
+
+        else if (planeta == 3) {
+          var peso_et = (usuario * gravedad_luna) / gravedad_tierra;
+          var nombrep = "La Luna";
+        }
+
+        else if (planeta == 4) {
+        var peso_et = (usuario * gravedad_marte) / gravedad_tierra;
+        var nombrep = "Marte";
+        }
+
+        else if (planeta == 5) {
+        var peso_et = (usuario * gravedad_ceres) / gravedad_tierra;
+        var nombrep = "Ceres";
+        }
+
+        else if (planeta == 6) {
+        var peso_et = (usuario * gravedad_jupiter) / gravedad_tierra;
+        var nombrep = "Jupiter";
+        }
+
+        else if (planeta == 7) {
+        var peso_et = (usuario * gravedad_saturno) / gravedad_tierra;
+        var nombrep = "Saturno";
+        }
+
+        else if (planeta == 8) {
+        var peso_et = (usuario * gravedad_urano) / gravedad_tierra;
+        var nombrep = "Urano";
+        }
+
+        else if (planeta == 9) {
+        var peso_et = (usuario * gravedad_neptuno) / gravedad_tierra;
+        var nombrep = "Neptuno";
+        }
+
+        else if (planeta == 10) {
+        var peso_et = (usuario * gravedad_pluton) / gravedad_tierra;
+        var nombrep = "Pluton";
+        }
+
+        else if (planeta == 11) {
+        var peso_et = (usuario * gravedad_sedna) / gravedad_tierra;
+        var nombrep = "Sedna";
+        }
+
+        var peso_et = parseInt(peso_et);
+
+        //alert(peso_et);
+
+        document.getElementById("resultado").innerHTML= nom + ", Tu peso en <strong>" + nombrep + "</strong> es igual a " + peso_et + "kg"
+      }
+       </script>
+  </head>
+  <body background= "http://wallpapercave.com/wp/3FKopAb.jpg">
+
+    <div id="caja1">
+
+    <h1>Tu peso en otros Planetas</h1>
+    <p>Diseñado por Juan Jose Mejia</p>
+
+    <p> Ingresa tu <strong> peso;</strong> <input type="text" id="peso"></p>
+    <p> En que lugar deseas saber tu peso?</p>
+    <p><input type="radio" id="El Sol" name="planeta" value="0"> El Sol<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/The_Sun_by_the_Atmospheric_Imaging_Assembly_of_NASA's_Solar_Dynamics_Observatory_-_20100819.jpg/300px-The_Sun_by_the_Atmospheric_Imaging_Assembly_of_NASA's_Solar_Dynamics_Observatory_-_20100819.jpg" width="120" height="112" align="center"><br>
+      <input type="radio" id="Mercurio" name="planeta" value="1"> Mercurio<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Mercury_in_color_-_Prockter07_centered.jpg/280px-Mercury_in_color_-_Prockter07_centered.jpg" width="112" height="108" align="center"><br>
+      <input type="radio" id="Venus" name="planeta" value="2"> Venus <img src="http://eltamiz.com/wp-content/uploads/2008/04/venus-3500.jpg" width="110" height="110" align="center"><br>
+      <input type="radio" id="La Luna" name="planeta" value="3"> La Luna <img src="http://dietaalcalina.info/wp-content/uploads/2015/07/la-dieta-de-la-luna.jpg" width="125" height="100" align="center"><br>
+      <input type="radio" id="Marte" name="planeta" value="4"> Marte<img src="http://estaticos.muyinteresante.es/uploads/images/article/57e152825bafe896ef91ab66/marte_0.jpg" width="100" height="80" align="center"><br>
+      <input type="radio" id="Ceres" name="planeta" value="5"> Ceres<img src="http://etheric.com/wp-content/uploads/2015/03/Ceres-3.jpg" width="100" height="88" align="center"><br>
+      <input type="radio" id="Jupiter" name="planeta" value="6"> Jupiter<img src="http://blogs.eltiempo.com/el-aleph/wp-content/uploads/sites/75/2016/07/J%C3%BApiter-el-gigante-de-gas.jpg" width="100" height="100" align="center"><br>
+      <input type="radio" id="Saturno" name="planeta" value="7"> Saturno<img src="http://www.todoelsistemasolar.com.ar/satnor.jpg" width="134" height="100" align="center"><br>
+      <input type="radio" id="Urano" name="planeta" value="8"> Urano<img src="https://esp.rt.com/actualidad/public_images/ebe/ebeb07fbc3b20373e35e0ac09ec44851_article.jpg" width="126" height="70" align="center"><br>
+      <input type="radio" id="Neptuno" name="planeta" value="9"> Neptuno<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Neptune_Full.jpg/280px-Neptune_Full.jpg" width="112" height="112" align="center"><br>
+      <input type="radio" id="Pluton" name="planeta" value"10"> Pluton<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Pluto-01_Stern_03_Pluto_Color_TXT.jpg/250px-Pluto-01_Stern_03_Pluto_Color_TXT.jpg" width="100" height="100" align="center"><br>
+      <input type="radio" id="Sedna" name="planeta" value"11"> Sedna<img src="http://upload.wikimedia.org/wikipedia/commons/4/4d/Sedna_art.png" width="100" height="80" align="center"><br>
+      <p><input type="button" value="calcular" onclick="calculo()"></p>
+      <p id="resultado"></p>
+    </div>
+
+  </body>
+</html>
